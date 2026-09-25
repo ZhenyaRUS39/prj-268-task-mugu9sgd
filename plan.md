@@ -1,53 +1,11 @@
-# Plan: prj-268-task-mugu9sgd
+# Plan: task-mugu9sgd
 
-**Project:** `prj-268-task-mugu9sgd`  
+**Project:** `PRJ-2345`  
 **Task ID:** `task-mugu9sgd`  
 **Repo:** `prj-268-task-mugu9sgd`  
-
-## Summary
-
-Декомпозиция задачи disk space мониторинга: 1) инициализация репо, 2) реализация core-скрипта, 3) тесты, 4) финальная документация.
+**Progress:** 0/0 subtasks done
 
 ## Subtasks
-
-### 1. Инициализация структуры репозитория
-
-- **ID:** `sub-1`
-- **Profile:** `20razrab1`
-- **Tester:** `TBD`
-- **Status:** `pending`
-- **Description:** Создать базовую структуру: README.md, requirements.txt, директорию scripts/ и tests/. Описать цель и использование в README.
-- **Test plan:** Проверить, что репозиторий содержит README.md, requirements.txt, пустые директории scripts/ и tests/. Файлы коммитятся в feat-ветку.
-
-### 2. Реализовать скрипт мониторинга disk space
-
-- **ID:** `sub-2`
-- **Profile:** `20razrab1`
-- **Tester:** `TBD`
-- **Status:** `pending`
-- **Description:** Написать scripts/disk_monitor.py: парсинг аргументов (--threshold, --json, --watch), получение usage через shutil.disk_usage, вывод в человекочитаемом и JSON-формате, exit-код 0/1 при превышении порога, опциональный watch-режим.
-- **Test plan:** Запустить python scripts/disk_monitor.py --threshold 90 --json на текущей системе: stdout валидный JSON, exit 0 если usage<90, иначе 1. Без --json — читаемый вывод с % и GB.
-- **Dependencies:** `sub-1`
-
-### 3. Написать unit-тесты
-
-- **ID:** `sub-3`
-- **Profile:** `30razrab2`
-- **Tester:** `TBD`
-- **Status:** `pending`
-- **Description:** Покрыть disk_monitor.py тестами в tests/test_disk_monitor.py: парсинг аргументов, форматирование вывода, пороговый exit-код, JSON-сериализация. Использовать pytest, мокать shutil.disk_usage через monkeypatch.
-- **Test plan:** pytest -v: все тесты зелёные, coverage scripts/disk_monitor.py >= 85%.
-- **Dependencies:** `sub-2`
-
-### 4. Финальная документация и примеры запуска
-
-- **ID:** `sub-4`
-- **Profile:** `30razrab2`
-- **Tester:** `TBD`
-- **Status:** `pending`
-- **Description:** Дополнить README примерами запуска (cron, systemd timer, docker), таблицей exit-кодов, лимитами и предупреждениями. Проверить, что --help выводит корректное описание.
-- **Test plan:** python scripts/disk_monitor.py --help показывает все опции с описанием; README содержит секции Usage, Exit codes, Automation.
-- **Dependencies:** `sub-2`, `sub-3`
 
 
 ---
